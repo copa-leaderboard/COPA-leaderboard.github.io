@@ -1,0 +1,107 @@
+<div id="leaderboard-Highway-action" class="container button-list">
+  <div class="heading">
+    <u>
+<!--      <div style="opacity:0;">1<br>1<br>1<br>1</div>-->
+      Highway - per-state action stability
+    </u>
+  </div>
+<!--</div>-->
+
+<section>
+  <div class="heading_second" id="Highway_action_cert_algo_heading">
+    <u>
+      <div style="opacity:0;">1<br>1</div>
+      <!-- Needed to introduce a margin for the navigation bar between leaderboards -->
+      Comparison on certification algorithms
+    </u>
+  </div>
+
+  <div class="overview">
+    <p class="doublealign">
+<!--      <font color="#FF0000">TODO</font>-->
+      Robustness certiﬁcation for per-state action stability in Highway environment.
+      Each row corresponds to one <b>RL algorithm</b>.
+      For each figure, the x-axis is the cumulative tolerable poisoning size
+      <math>&GreaterEqual; <span style="TEXT-DECORATION: overline">K</span></math>, and the y-axis is the stability ratio.
+    </p>
+  </div>
+
+  <div id="select_cert_algo_u" class="container button-list">
+      <div style="display: flex">
+        <label>Sub-policies:
+          <select id="cert_algo_u" style="width:150px; margin: 10px">
+            <option value="30">30</option>
+            <option value="50">50</option>
+            <option value="100" selected="selected">100</option>
+          </select>
+        </label>
+        <button type="button" class="button" onclick="choice_cert_algo_u()" style="width:150px; margin: 10px; height: 40px;">Certify!</button>
+      </div>
+  </div>
+
+  <div><img src='/Highway/action/images/legend_bar_cert.png' class="ori_img" id="Highway_action_cert_legend" alt="Highway action legend"></div>
+  <div id="Highway_action_cert_algo"></div>
+</section>
+
+<section>
+  <div class="heading_second" id="Highway_action_rl_algo_heading">
+    <u>
+      <div style="opacity:0;">1<br>1</div>
+      <!-- Needed to introduce a margin for the navigation bar between leaderboards -->
+      Comparison on RL algorithms
+    </u>
+  </div>
+
+  <div class="overview">
+    <p class="doublealign">
+      Robustness certiﬁcation for per-state action stability in Highway environment.
+      Each row corresponds to one <b>certification algorithm</b>.
+      For each figure, the x-axis is the cumulative tolerable poisoning size
+      <math>&GreaterEqual; <span style="TEXT-DECORATION: overline">K</span></math>, and the y-axis is the stability ratio.
+    </p>
+  </div>
+
+  <div id="select_rl_algo_u" class="container button-list">
+      <div style="display: flex">
+        <label>Sub-policies:
+          <select id="rl_algo_u" style="width:150px; margin: 10px">
+            <option value="30">30</option>
+            <option value="50">50</option>
+            <option value="100" selected="selected">100</option>
+          </select>
+        </label>
+        <button type="button" class="button" onclick="choice_rl_algo_u()" style="width:150px; margin: 10px; height: 40px;">Certify!</button>
+      </div>
+  </div>
+
+  <div><img src='/Highway/action/images/legend_bar_rl.png' class="ori_img" id="Highway_action_rl_legend" alt="Highway action legend"></div>
+  <div id="Highway_action_rl_algo"></div>
+</section>
+
+<script>
+  function choice_cert_algo_u() {
+    var u = document.getElementById("cert_algo_u").value;
+    if (u === "30") {
+      $("#Highway_action_cert_algo").load("./Highway/action/cert_algo_30.html");
+    } else if (u === "50") {
+      $("#Highway_action_cert_algo").load("./Highway/action/cert_algo_50.html");
+    } else {
+      $("#Highway_action_cert_algo").load("./Highway/action/cert_algo_100.html");
+    }
+  }
+  function choice_rl_algo_u() {
+    var u = document.getElementById("rl_algo_u").value;
+    if (u === "30") {
+      $("#Highway_action_rl_algo").load("./Highway/action/rl_algo_30.html");
+    } else if (u === "50") {
+      $("#Highway_action_rl_algo").load("./Highway/action/rl_algo_50.html");
+    } else {
+      $("#Highway_action_rl_algo").load("./Highway/action/rl_algo_100.html");
+    }
+  }
+</script>
+
+<script>
+  $("#Highway_action_cert_algo").load("./Highway/action/cert_algo_100.html");
+  $("#Highway_action_rl_algo").load("./Highway/action/rl_algo_100.html");
+</script>
