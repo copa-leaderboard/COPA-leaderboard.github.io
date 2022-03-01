@@ -12,7 +12,7 @@
     <u>
       <div style="opacity:0;">1<br>1</div>
       <!-- Needed to introduce a margin for the navigation bar between leaderboards -->
-      Comparison on certification algorithms
+      Comparison on aggregation protocols
     </u>
   </div>
 
@@ -20,15 +20,15 @@
     <p class="doublealign">
 <!--      <font color="#FF0000">TODO</font>-->
       Robustness certiﬁcation for per-state action stability in Highway environment.
-      Each row corresponds to one <b>RL algorithm</b>.
-      For each figure, the x-axis is the cumulative tolerable poisoning size
-      <math>&GreaterEqual; <span style="TEXT-DECORATION: overline">K</span></math>, and the y-axis is the stability ratio.
+      We plot the cumulative histogram of the tolerable poisoning size <span style="TEXT-DECORATION: overline">K</span> for all time steps.
+      We provide the certification for different aggregation protocols (PARL, TPARL, DPARL) on three RL algorithms and different #sub-policies.
+      The results are averaged over 20 runs with the vertical bar on top denoting the standard deviation.
     </p>
   </div>
 
   <div id="select_cert_algo_u" class="container button-list">
       <div style="display: flex">
-        <label>Sub-policies:
+        <label>#sub-policies:
           <select id="cert_algo_u" style="width:150px; margin: 10px">
             <option value="30">30</option>
             <option value="50">50</option>
@@ -55,15 +55,15 @@
   <div class="overview">
     <p class="doublealign">
       Robustness certiﬁcation for per-state action stability in Highway environment.
-      Each row corresponds to one <b>certification algorithm</b>.
-      For each figure, the x-axis is the cumulative tolerable poisoning size
-      <math>&GreaterEqual; <span style="TEXT-DECORATION: overline">K</span></math>, and the y-axis is the stability ratio.
+      We plot the cumulative histogram of the tolerable poisoning size <span style="TEXT-DECORATION: overline">K</span> for all time steps.
+      We provide the certification for different RL algorithms (DQN, QR-DQN, C51) on three aggregation protocols and different #sub-policies.
+      The results are averaged over 20 runs with the vertical bar on top denoting the standard deviation.
     </p>
   </div>
 
   <div id="select_rl_algo_u" class="container button-list">
       <div style="display: flex">
-        <label>Sub-policies:
+        <label>#sub-policies:
           <select id="rl_algo_u" style="width:150px; margin: 10px">
             <option value="30">30</option>
             <option value="50">50</option>
