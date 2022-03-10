@@ -1,0 +1,83 @@
+<div id="leaderboard-Breakout-reward" class="container button-list">
+  <div class="heading">
+    <u>
+<!--      <div style="opacity:0;">1<br>1<br>1<br>1</div>-->
+      Breakout - cumulative reward lower bound
+    </u>
+  </div>
+<!--</div>-->
+
+<section>
+  <div class="heading_second" id="Highway_reward_cert_algo_heading">
+    <u>
+      <div style="opacity:0;">1<br>1</div>
+      <!-- Needed to introduce a margin for the navigation bar between leaderboards -->
+      Comparison on aggregation protocols
+    </u>
+  </div>
+
+  <div class="overview">
+    <p class="doublealign">
+      Robustness certiﬁcation for cumulative reward bound in Breakout environment.
+      Each row corresponds to one <b>partition number</b> and
+      each column corresponds to one <b>RL algorithm</b>.
+      For each figure, the x-axis is the poisoning size <math>K</math>,
+      and the y-axis is the lower bound of cumulative reward <u>J</u><sub>K</sub>.
+    </p>
+  </div>
+
+  <div><img src='./Breakout/reward/images/legend_reward_cert.png' class="ori_img" id="Highway_reward_cert_legend" alt="Breakout reward legend"></div>
+  <div id="Highway_reward_cert_algo"></div>
+</section>
+
+<section>
+  <div class="heading_second" id="Highway_reward_rl_algo_heading">
+    <u>
+      <div style="opacity:0;">1<br>1</div>
+      <!-- Needed to introduce a margin for the navigation bar between leaderboards -->
+      Comparison on RL algorithms
+    </u>
+  </div>
+
+  <div class="overview">
+    <p class="doublealign">
+      Robustness certiﬁcation for cumulative reward bound in Breakout environment.
+      Each row corresponds to one <b>partition number</b> and
+      each column corresponds to one <b>aggregation protocol</b>.
+      For each figure, the x-axis is the poisoning size <math>K</math>,
+      and the y-axis is the lower bound of cumulative reward <u>J</u><sub>K</sub>.
+    </p>
+  </div>
+
+  <div><img src='./Breakout/reward/images/legend_reward_rl.png' class="ori_img" id="Highway_reward_rl_legend" alt="Breakout reward legend"></div>
+  <div id="Highway_reward_rl_algo"></div>
+</section>
+
+<section>
+  <div class="heading_second" id="Highway_reward_u_heading">
+    <u>
+      <div style="opacity:0;">1<br>1</div>
+      <!-- Needed to introduce a margin for the navigation bar between leaderboards -->
+      Comparison on #sub-policies
+    </u>
+  </div>
+
+  <div class="overview">
+    <p class="doublealign">
+      Robustness certiﬁcation for cumulative reward bound in Breakout environment.
+      Each row corresponds to one <b>RL algorithm</b> and
+      each column corresponds to one <b>aggregation protocol</b>.
+      For each figure, the x-axis is the poisoning size <math>K</math>,
+      and the y-axis is the lower bound of cumulative reward <u>J</u><sub>K</sub>.
+    </p>
+  </div>
+
+  <div><img src='./Breakout/reward/images/legend_reward_u.png' class="ori_img" id="Highway_reward_u_legend" alt="Breakout reward legend"></div>
+  <div id="Highway_reward_u"></div>
+</section>
+
+<script>
+  $("#Highway_reward_cert_algo").load("./Breakout/reward/cert_algo.html");
+  $("#Highway_reward_rl_algo").load("./Breakout/reward/rl_algo.html");
+  $("#Highway_reward_u").load("./Breakout/reward/u.html");
+</script>
